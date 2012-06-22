@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sinatra::Spec by mjijackson</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Sinatra::Spec</h1>
+        <p>Simple specs for Sinatra apps using MiniTest</p>
+
+        <p class="view"><a href="https://github.com/mjijackson/sinatra-spec">View the Project on GitHub <small>mjijackson/sinatra-spec</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/mjijackson/sinatra-spec/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mjijackson/sinatra-spec/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mjijackson/sinatra-spec">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><strong>Sinatra::Spec</strong> is a class for describing <a href="http://www.sinatrarb.com">Sinatra</a>
+apps using <a href="https://github.com/seattlerb/minitest">MiniTest</a>, the unit testing
+framework that ships with Ruby 1.9.</p>
+
+<h2>Installation</h2>
+
+<p>Via <a href="http://rubygems.org">RubyGems</a>:</p>
+
+<pre><code>$ sudo gem install sinatra-spec
+</code></pre>
+
+<p>From a local copy:</p>
+
+<pre><code>$ git clone git://github.com/mjijackson/sinatra-spec.git
+$ cd sinatra-session
+$ rake package &amp;&amp; sudo rake install
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>To use <code>Sinatra::Spec</code> simply use your Sinatra app as the description argument.
+Inside that <code>describe</code> block you have access to all the methods of <a href="https://github.com/brynary/rack-test/">Rack::Test</a>.
+These methods will be called on a new instance of the app. See the <a href="http://www.sinatrarb.com/testing.html">testing page</a>
+in the Sinatra user manual for an explanation of how to test your app using
+Rack::Test.</p>
+
+<p>Here is an example:</p>
+
+<div class="highlight">
+<pre><span class="n">describe</span> <span class="no">MyApp</span> <span class="k">do</span>
+  <span class="n">describe</span> <span class="s2">"GET /"</span> <span class="k">do</span>
+    <span class="n">it</span> <span class="s2">"should return ok"</span> <span class="k">do</span>
+      <span class="n">get</span> <span class="s2">"/"</span>
+      <span class="n">assert</span> <span class="n">last_response</span><span class="o">.</span><span class="n">ok?</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre>
+</div>
+
+
+<h2>License</h2>
+
+<p>Copyright 2012 Michael Jackson</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>The software is provided "as is", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose and non-infringement. In no event shall the
+authors or copyright holders be liable for any claim, damages or other
+liability, whether in an action of contract, tort or otherwise, arising from,
+out of or in connection with the software or the use or other dealings in
+the software.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/mjijackson">mjijackson</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
